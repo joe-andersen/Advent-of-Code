@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  web:
+    image: aoc-2022
+    container_name: aoc-2022
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - "../:/app"
+      - "/app/environment"
